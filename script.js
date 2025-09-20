@@ -6,7 +6,7 @@ const chatWindow = document.getElementById("chat-window");
 const chatName = document.querySelector(".chat-name");
 const backBtn = document.getElementById("back-btn");
 
-let activeChat = "Punit"; 
+let activeChat = "Namita"; 
 let chatHistory = {Namita: [], Rajat: [], Nitesh: [], Aman: [] };
 
 // Switch contacts
