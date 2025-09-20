@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Whatsapp Web Responsive</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sidebar / Contacts -->
+  <div class="sidebar" id="sidebar">
+    <h2>Whatsapp Chats</h2>
+    <div class="contact active" data-name="Namita"><img src="./images/Namita.png" alt="">Namita</div>
+    <div class="contact" data-name="Rajat"><img src="./images/Rajat.png" alt="">Rajat</div>
+    <div class="contact" data-name="Nitesh"><img src="./images/Nitesh.png" alt="">Nitesh</div>
+    <div class="contact" data-name="Aman"><img src="./images/Aman.png" alt="">Aman</div>
+  </div>
+
+  <!-- Chat window -->
+  <div class="chat-window" id="chat-window">
+    <div class="chat-header" id="chat-header">
+      <button id="back-btn">&#8592;</button>
+      <img src="./images/Namita.png" alt=""> <span class="chat-name">Namita</span>
+    </div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="chat-input">
+      <input id="msg" placeholder="Type a message...">
+      <button onclick="send()">➤</button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
