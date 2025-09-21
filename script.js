@@ -61,7 +61,7 @@ async function send() {
   renderMessages();
   msgInput.value = "";
 
-  if (activeChat === "Punit") {
+  if (activeChat === "Namita") {
     // Call Gemini API
     try {
       const res = await fetch("/chat", { // your backend route
