@@ -66,11 +66,14 @@ app.post("/chat", async (req, res) => {
     const result = await model.generateContent(prompt);
 
     // Extract reply safely
-    const reply = result.response?.text?.() || "Sorry, I am not able to do that.";
+    let reply = "Sorry, I am not able to do that.";
+    if (result && result.response && typeof result.response.text === "function") {
+      reply = result.response.text();
+    }
 
     res.json({ reply });
   } catch (error) {
-    console.error("Gemini error:", error);
+    console.error("Gemini error:", error.response?.data || error.message || error);
     res.status(500).json({ error: "Something went wrong!" });
   }
 });
